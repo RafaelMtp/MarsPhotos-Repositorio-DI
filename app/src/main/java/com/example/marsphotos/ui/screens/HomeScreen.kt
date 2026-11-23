@@ -21,7 +21,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Text
@@ -41,18 +40,18 @@ fun HomeScreen(
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
-    when (marsUiState) {
-        is MarsUiState.Loading -> LoadingScreen(modifier = modifier.fillMaxSize())
-        is MarsUiState.Success -> ResultScreen(
-            marsUiState.photos, modifier = modifier.fillMaxWidth()
-        )
-        is MarsUiState.Error -> ErrorScreen( modifier = modifier.fillMaxSize())
+    Box(
+        modifier = modifier.fillMaxSize().padding(contentPadding),
+        contentAlignment = Alignment.Center
+    ) {
+        when (marsUiState) {
+            is MarsUiState.Loading -> LoadingScreen()
+            is MarsUiState.Success -> ResultScreen(marsUiState.photos)
+            is MarsUiState.Error -> ErrorScreen(modifier = Modifier.fillMaxSize())
+        }
     }
 }
 
-/**
- * The home screen displaying the loading message.
- */
 @Composable
 fun LoadingScreen(modifier: Modifier = Modifier) {
     Image(
@@ -62,9 +61,6 @@ fun LoadingScreen(modifier: Modifier = Modifier) {
     )
 }
 
-/**
- * The home screen displaying error message with re-attempt button.
- */
 @Composable
 fun ErrorScreen(modifier: Modifier = Modifier) {
     Column(
@@ -79,9 +75,6 @@ fun ErrorScreen(modifier: Modifier = Modifier) {
     }
 }
 
-/**
- * ResultScreen displaying number of photos retrieved.
- */
 @Composable
 fun ResultScreen(photos: String, modifier: Modifier = Modifier) {
     Box(
