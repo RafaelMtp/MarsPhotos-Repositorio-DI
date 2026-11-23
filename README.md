@@ -6,7 +6,7 @@ La app consulta la API pública de Marte y muestra cuántas fotografías se recu
 
 ## Abrir y ejecutar en Android Studio
 
-1. Descomprime el ZIP y abre la carpeta `MarsPhotos` con **File > Open**. La carpeta correcta contiene `settings.gradle.kts`.
+1. Clona este repositorio o descomprime el ZIP y abre la carpeta del proyecto con **File > Open**. La carpeta correcta contiene `settings.gradle.kts`.
 2. Espera la sincronización de Gradle. Permite descargar Android SDK 34 y Build Tools 34.0.0 si Android Studio los solicita.
 3. En la configuración de Gradle utiliza JDK 17 o JDK 21. La compilación de comprobación se hizo con JDK 21.
 4. Elige el módulo `app` y un emulador o teléfono con Android 7.0 o superior.
@@ -64,9 +64,11 @@ No sustituyas tus capturas por imágenes del codelab. El informe Word incluye un
 
 ## GitHub e historial
 
-El paquete conserva el historial Git de preparación. No uses «Upload files» si quieres conservar esos commits. Publica desde Android Studio con **Git > GitHub > Share Project on GitHub**, o conecta un repositorio vacío con Git y haz `push` de `main`.
+Repositorio publicado: https://github.com/RafaelMtp/MarsPhotos-Repositorio-DI
 
-Los cambios de preparación están registrados como commits de Codex; se conserva la atribución del proyecto base de Android Open Source Project. Tus cambios posteriores deben usar la identidad configurada en tu cuenta Git.
+El historial de GitHub separa la importación del código base, la configuración de compilación, el repositorio y la DI manual, el ajuste de la pantalla, las pruebas y la documentación. Cada commit de publicación identifica el estado local del que procede.
+
+El código se preparó con asistencia de Codex y conserva la atribución y licencia del proyecto base de Google. El ZIP de preparación conserva además su historial Git local original.
 
 ## Fuente
 
