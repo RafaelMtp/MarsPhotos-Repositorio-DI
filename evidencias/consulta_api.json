@@ -1,0 +1,9 @@
+{
+  "url": "https://android-kotlin-fun-mars-server.appspot.com/photos",
+  "status": 200,
+  "photos_count": 838,
+  "first_photo_fields": [
+    "id",
+    "img_src"
+  ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.marsphotos.MarsViewModelTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-18T14:20:24" hostname="89c5b68d6ce4" time="0.174">
+  <properties/>
+  <testcase name="marsViewModel_httpFailure_showsError" classname="com.example.marsphotos.MarsViewModelTest" time="0.167"/>
+  <testcase name="marsViewModel_newRequestAfterFailure_showsSuccess" classname="com.example.marsphotos.MarsViewModelTest" time="0.003"/>
+  <testcase name="marsViewModel_getMarsPhotos_verifyMarsUiStateSuccess" classname="com.example.marsphotos.MarsViewModelTest" time="0.001"/>
+  <testcase name="marsViewModel_networkFailure_showsError" classname="com.example.marsphotos.MarsViewModelTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
